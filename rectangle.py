@@ -19,3 +19,6 @@ class Rectangle(Shape):
 
     def square(self):
         return self.side_a * self.side_b
+
+    def __str__(self):
+        return f'Rectangle with sides {self.side_a} and {self.side_b}'
