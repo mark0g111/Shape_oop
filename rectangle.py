@@ -30,5 +30,13 @@ class Rectangle(Shape):
     def square(self):
         return self.__side_a * self.__side_b
 
+    def __eq__(self, other):
+        if isinstance(other, Rectangle):
+            return other.__side_a == self.__side_a and other.__side_b == self.__side_b
+        return False
+
+    def __repr__(self):
+        return f'Rectangle({self.__side_a}, {self.__side_b})'
+
     def __str__(self):
         return f'Rectangle with sides {self.__side_a} and {self.__side_b}'
