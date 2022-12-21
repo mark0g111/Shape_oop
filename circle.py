@@ -4,7 +4,10 @@ from math import pi
 class Circle:
 
     def __init__(self, radius):
-        self.radius = radius
+        if radius > 0:
+            self.radius = radius
+        else:
+            raise ValueError('Radius must be over zero!')
 
     def length(self):
         return round(2 * pi * self.radius, 2)

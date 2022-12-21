@@ -5,8 +5,11 @@ class Rectangle(Shape):
 
     def __init__(self, side_a, side_b):
         super().__init__()
-        self.__side_a = side_a
-        self.__side_b = side_b
+        if side_a > 0 and side_b > 0:
+            self.__side_a = side_a
+            self.__side_b = side_b
+        else:
+            raise ValueError('Sides value must be over zero!')
 
     @property
     def side_a(self):
