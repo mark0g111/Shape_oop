@@ -8,9 +8,5 @@ class Shape(ABC):
         super().__init__()
 
     @abstractmethod
-    def perimeter(self):
-        pass
-
-    @abstractmethod
     def square(self):
         pass

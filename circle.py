@@ -1,9 +1,12 @@
 from math import pi
 
+from shape import Shape
 
-class Circle:
+
+class Circle(Shape):
 
     def __init__(self, radius):
+        super().__init__()
         if radius > 0:
             self.radius = radius
         else:

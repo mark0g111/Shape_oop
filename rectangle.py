@@ -1,7 +1,8 @@
+from mixin_rectangle import MixinRectangle
 from shape import Shape
 
 
-class Rectangle(Shape):
+class Rectangle(Shape, MixinRectangle):
 
     def __init__(self, side_a, side_b):
         super().__init__()
@@ -28,7 +29,7 @@ class Rectangle(Shape):
         self.__side_b = new_value
 
     def perimeter(self):
-        return 2 * (self.__side_a + self.__side_b)
+        return super().perimeter(self.side_a, self.side_b)
 
     def square(self):
         return self.__side_a * self.__side_b
